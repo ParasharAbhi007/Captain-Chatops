@@ -1,0 +1,229 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "deployment",
+      "patterns": [
+        "I would like to do deployment",
+        "assist me in deployment"
+      ],
+      "responses": [
+        "Captain Canary is happy to assist, please select the orgIdentifier where you would like to deploy: Here are the available Org: 1. AbhiOrg\n2. default. Which one do you want to select? "
+      ]
+    },
+    {
+      "tag": "orgIdentifier",
+      "patterns": [
+        "AbhiOrg",
+        "default"
+      ],
+      "responses": [
+        "Thanks for selecting the Org, please select the project identifier  Here are the available projects: 1. CSETest1\n2. CI-Bootcamp-Abhi. Which one do you want to select?"
+      ]
+    },
+    {
+      "tag": "projectIdentifier",
+      "patterns": [
+        "CSETest1",
+        "CI-Bootcamp-Abhi"
+      ],
+      "responses": [
+        "Thanks for selecting the project identifier, please provide the name of pipeline"
+      ]
+    },
+    {
+      "tag": "pipelineName",
+      "patterns": [
+        "sample1",
+        "helmdeploy",
+        "kubedeploy"
+      ],
+      "responses": [
+        "thanks for providing the name, please provide the stage name "
+      ]
+    },
+    {
+      "tag": "StageName",
+      "patterns": [
+        "deploy",
+        "deploy1"
+      ],
+      "responses": [
+        "Thanks for providing the stage name, please select deployment type, we have 1.Kubernetes\n2.Helm"
+      ]
+    },
+    {
+      "tag": "deployment_type",
+      "patterns": [
+        "Kubernetes",
+        "Serverless lambda",
+        "Helm"
+      ],
+      "responses": [
+        "Thanks for selecting the deployment type, Please select a Service you have 1.Service1\nService2 available"
+      ]
+    },
+    
+    {
+      "tag": "service",
+      "patterns": [
+        "service1",
+        "service2"
+      ],
+      "responses": [
+        "Thanks for selecting the service, please select the infra : Here are the available infrastructure options: 1. Infra1\n2. Infra2. Which one do you want to select? "
+      ]
+    },
+    {
+      "tag": "Environment",
+      "patterns": [
+        "Infra1",
+        "Infra2"
+      ],
+      "responses": [
+        "Thanks for providing the infra details, please add execution step details, provide execution step name"
+      ]
+    },
+    {
+      "tag": "execution step",
+      "patterns": [
+        "Rollout Deployment"
+        
+      ],
+      "responses": [
+        "Thanks for providing the step name, please provide the type of deployement"
+      ]
+    },
+    {
+      "tag": "K8sRollingDeploy",
+      "patterns": [
+        "K8sRollingDeploy"
+        
+      ],
+      "responses": [
+        "Thanks for providing the type, please confirm if we should go ahead and create the pipeline"
+      ]
+    },
+    {
+      "tag": "confirm",
+      "patterns": [
+        "Yes",
+        "Sure",
+        "Okay",
+        "Alright"
+      ],
+      "responses": [
+        "Great! I'll make the API call now."
+      ]
+    },
+    {
+      "tag": "Error",
+      "patterns": [
+        "Can you help me with this error",
+        "Hlep with this error",
+        "Expression evaluation"
+        
+      ],
+      "responses": [
+        "Captain is here, please provide the error"
+      ]
+    },
+    {
+      "tag": "Expression",
+      "patterns": [
+        "Error evaluating expression"
+        
+      ],
+      "responses": [
+        "Looks like expression failed to evaluate, can you please check the docs here: \nhttps://developer.harness.io/docs\n/platform/variables-and-expressions/harness-variables/ "
+      ]
+    },
+    {
+      "tag": "ChatGPT",
+      "patterns": [
+        "Activate ChatGPT responses",
+        "Activate GPT",
+        "Turn on ChatGPT"
+        
+      ],
+      "responses": [
+        "ChatGPT responses are activated, please try asking something"
+      ]
+    },
+    {
+      "tag": "Zendesk",
+      "patterns": [
+        "Create a Zendesk Ticket",
+        "Create a ticket",
+        "Raise query"
+        
+      ],
+      "responses": [
+        "Sure we will create a ticket with support, Please provide the Feedback Category\n 1.Problem\n2.Question\n3.Feature Request\n4.Other"
+      ]
+    },
+    {
+      "tag": "Response",
+      "patterns": [
+        "Problem",
+        "Question",
+        "Feature Request",
+        "Other"
+        
+      ],
+      "responses": [
+        "Thanks, please provide subject for the issue"
+      ]
+    },
+    {
+      "tag": "Subject",
+      "patterns": [
+        "API not working"
+       
+        
+      ],
+      "responses": [
+        "Please provide the complete info of the issue faced"
+      ]
+    },
+    {
+      "tag": "Message",
+      "patterns": [
+        "the pipeline creation API is not working"
+        
+      ],
+      "responses": [
+        "Thanks, creating a ticket for the issue"
+      ]
+    }
+  ]
+}
